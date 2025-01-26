@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
+
 import os
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -28,7 +30,7 @@ EMAIL_USE_SSL = False
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-tsgp69-8tw12jkv%76#b70grfvyq$pc3)rs^y$23n@s1^-)+re'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -96,11 +98,11 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'myprojectdb',  # Your database name
-        'USER': 'myprojectuser',  # Your PostgreSQL user
-        'PASSWORD': 'volisend',  # The password you set for the user
-        'HOST': 'localhost',  # The host where PostgreSQL is running
-        'PORT': '5432',  # Default port for PostgreSQL
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
     }
 }
 
