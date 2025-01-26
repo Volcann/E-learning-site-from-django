@@ -1,0 +1,54 @@
+2025-01-20 17:23:54.856 PKT [80170] LOG:  starting PostgreSQL 14.15 (Homebrew) on x86_64-apple-darwin22.6.0, compiled by Apple clang version 15.0.0 (clang-1500.1.0.2.5), 64-bit
+2025-01-20 17:23:54.859 PKT [80170] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-01-20 17:23:54.859 PKT [80170] LOG:  listening on IPv6 address "::1", port 5432
+2025-01-20 17:23:54.860 PKT [80170] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-01-20 17:23:54.866 PKT [80172] LOG:  database system was shut down at 2025-01-20 17:23:12 PKT
+2025-01-20 17:23:54.872 PKT [80170] LOG:  database system is ready to accept connections
+2025-01-20 17:24:10.489 PKT [80228] FATAL:  role "postgres" does not exist
+2025-01-20 17:24:41.127 PKT [80299] FATAL:  database "volcann" does not exist
+2025-01-20 17:25:00.024 PKT [80355] FATAL:  role "Volcann" does not exist
+2025-01-20 17:25:22.107 PKT [80411] FATAL:  role "postgres" does not exist
+2025-01-20 17:25:44.916 PKT [80469] FATAL:  database "volcann" does not exist
+2025-01-20 17:26:22.255 PKT [80556] FATAL:  lock file "postmaster.pid" already exists
+2025-01-20 17:26:22.255 PKT [80556] HINT:  Is another postmaster (PID 80170) running in data directory "/usr/local/var/postgresql@14"?
+2025-01-20 17:27:22.913 PKT [80713] FATAL:  role "postgres" does not exist
+2025-01-20 17:27:29.897 PKT [80737] FATAL:  role "postgres" does not exist
+2025-01-20 17:27:51.371 PKT [80791] FATAL:  role "postgres" does not exist
+2025-01-20 17:28:05.209 PKT [80834] FATAL:  database "volcann" does not exist
+2025-01-20 17:28:43.423 PKT [80924] FATAL:  role "postgres" does not exist
+2025-01-20 17:32:44.038 PKT [81469] ERROR:  database "postgres" already exists
+2025-01-20 17:32:44.038 PKT [81469] STATEMENT:  CREATE DATABASE postgres;
+2025-01-21 14:42:14.839 PKT [33401] FATAL:  role "your_username" does not exist
+2025-01-21 14:44:45.694 PKT [34173] ERROR:  role "volcann" already exists
+2025-01-21 14:44:45.694 PKT [34173] STATEMENT:  CREATE ROLE volcann WITH LOGIN PASSWORD 'volisend';
+2025-01-21 14:47:05.806 PKT [34631] FATAL:  database "your_database_name" does not exist
+2025-01-21 14:48:34.253 PKT [34846] FATAL:  database "volcann" does not exist
+2025-01-21 14:48:42.883 PKT [34892] FATAL:  database "volcann" does not exist
+2025-01-21 14:49:55.078 PKT [35079] FATAL:  database "your_database_name" does not exist
+2025-01-21 14:52:34.196 PKT [35444] FATAL:  database "your_database_name" does not exist
+2025-01-21 14:52:34.227 PKT [35445] FATAL:  database "your_database_name" does not exist
+2025-01-21 14:52:54.843 PKT [35496] FATAL:  database "your_database_name" does not exist
+2025-01-21 14:52:55.787 PKT [35497] FATAL:  database "your_database_name" does not exist
+2025-01-21 14:54:19.400 PKT [35694] FATAL:  database "your_database_name" does not exist
+2025-01-21 14:54:19.425 PKT [35695] FATAL:  database "your_database_name" does not exist
+2025-01-21 14:54:47.235 PKT [35781] ERROR:  relation "app_todo" does not exist at character 13
+2025-01-21 14:54:47.235 PKT [35781] STATEMENT:  INSERT INTO "app_todo" ("title", "is_done") VALUES ('Sample Task 1', false) RETURNING "app_todo"."id"
+2025-01-21 14:54:47.249 PKT [35781] ERROR:  relation "app_todo" does not exist at character 13
+2025-01-21 14:54:47.249 PKT [35781] STATEMENT:  INSERT INTO "app_todo" ("title", "is_done") VALUES ('Sample Task 2', true) RETURNING "app_todo"."id"
+2025-01-21 17:01:52.052 PKT [48725] ERROR:  relation "authtoken_token" does not exist at character 35
+2025-01-21 17:01:52.052 PKT [48725] STATEMENT:  SELECT COUNT(*) AS "__count" FROM "authtoken_token"
+2025-01-21 17:01:52.091 PKT [48725] ERROR:  relation "authtoken_token" does not exist at character 363
+2025-01-21 17:01:52.091 PKT [48725] STATEMENT:  SELECT "authtoken_token"."key", "authtoken_token"."user_id", "authtoken_token"."created", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "authtoken_token" INNER JOIN "auth_user" ON ("authtoken_token"."user_id" = "auth_user"."id") ORDER BY "authtoken_token"."created" DESC, "authtoken_token"."key" DESC LIMIT 21
+2025-01-21 17:01:52.093 PKT [48725] ERROR:  relation "authtoken_token" does not exist at character 363
+2025-01-21 17:01:52.093 PKT [48725] STATEMENT:  SELECT "authtoken_token"."key", "authtoken_token"."user_id", "authtoken_token"."created", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "authtoken_token" INNER JOIN "auth_user" ON ("authtoken_token"."user_id" = "auth_user"."id") ORDER BY "authtoken_token"."created" DESC, "authtoken_token"."key" DESC LIMIT 21
+2025-01-25 22:49:16.184 PKT [8526] ERROR:  role "admin" does not exist
+2025-01-25 22:49:16.184 PKT [8526] STATEMENT:  GRANT ALL PRIVILEGES ON DATABASE user_auth TO admin;
+2025-01-25 22:50:48.215 PKT [8526] ERROR:  role "volcann" already exists
+2025-01-25 22:50:48.215 PKT [8526] STATEMENT:  ALTER ROLE admin RENAME TO volcann;
+2025-01-25 22:51:20.227 PKT [8526] ERROR:  role "volcann" already exists
+2025-01-25 22:51:20.227 PKT [8526] STATEMENT:  ALTER ROLE admin RENAME TO volcann;
+2025-01-25 22:56:45.259 PKT [9773] FATAL:  role "your_username" does not exist
+2025-01-25 23:05:30.724 PKT [10743] ERROR:  database "user_auth" is being accessed by other users
+2025-01-25 23:05:30.724 PKT [10743] DETAIL:  There is 1 other session using the database.
+2025-01-25 23:05:30.724 PKT [10743] STATEMENT:  DROP DATABASE user_auth;
+2025-01-25 23:08:44.711 PKT [10169] FATAL:  terminating connection due to administrator command

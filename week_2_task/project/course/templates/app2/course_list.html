@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course List</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #2c3e50, #4ca1af);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        a {
+            text-decoration: none;
+            font-size: 1.1rem;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+        }
+        a:hover {
+            color: #4ca1af;
+            text-decoration: underline;
+        }
+        .btn-primary {
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            border: none;
+            border-radius: 25px;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            transition: all 0.4s ease-in-out;
+            margin: 10px;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(to right, #4ca1af, #2c3e50);
+            transform: translateY(-3px);
+        }
+        .btn-primary:active {
+            background: #2c3e50;
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Courses</h1>
+        <ul>
+            {% for course in courses %}
+                <li>
+                    <a href="{% url 'course_detail' course.id %}">{{ course.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'course_create' %}" class="btn btn-primary">Create New Course</a>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
